@@ -1,11 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Header from './Header';
 
 function App() {
   return (
-    <p className='font-bold underline m-auto'>
-          Ecommerce
-        </p>
+    <Header></Header>
   );
 }
 
