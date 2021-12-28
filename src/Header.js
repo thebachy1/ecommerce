@@ -1,40 +1,51 @@
-import React, { Component } from 'react';
-import instagramlogo from './images/instagram-icon.svg';
-import facebooklogo from './images/facebook-icon.svg';
-import cartlogo from './images/cart-icon.svg';
+import React from "react";
+import "./Header.css";
+import logo from "./images/bruma-logo.jpg";
+import SearchIcon from "@mui/icons-material/Search";
+import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
-export default class Header extends Component {
-    render() {
-        return (
-            <div className='m-5'>
-                <div className='flex justify-center'>
-                    <div>
-                        <p className='font-bold underline'>
-                            Ecommerce
-                        </p>
-                    </div>
-                    <div className='flex wrap items-center'>
-                        <a>
-                            <img
-                                src={ instagramlogo }
-                                className='w-12'
-                            />
-                        </a>
-                        <a>
-                            <img
-                                src={ facebooklogo }
-                                className='w-8'
-                            />
-                        </a>
-                        <a>
-                            <img
-                                src={ cartlogo }
-                                className='w-8'
-                            />
-                        </a>
-                    </div>
-                </div>
-            </div>
-        )
-    }
+function Header() {
+  return (
+    <div className="header h-[60px] flex items-center bg-[#000000] sticky top-0 z-50">
+      <img
+        className="header_logo w-[85px] object-contain mx-[20px] my-0"
+        src={logo}
+      />
+      <div className="header_search flex flex-[1] items-center rounded-[24px]">
+        <input
+          className="header_searchInput h-[12px] p-[10px] border-none w-full border-0 box-content"
+          type="text"
+        />
+        <SearchIcon className="header_searchIcon p-[5px] bg-[#20ACE8] box-content" />
+      </div>
+      <div className="header_nav flex justify-evenly">
+        <div className="header_option flex flex-col mx-[10px] text-white">
+          <span className="header_optionLineOne text-[10px]">Hello user</span>
+          <span className="header_optionLineTwo text-[13px] font-extrabold">
+            Sign in
+          </span>
+        </div>
+        <div className="header_option flex flex-col mx-[10px] text-white">
+          <span className="header_optionLineOne text-[10px]">Returns</span>
+          <span className="header_optionLineTwo text-[13px] font-extrabold">
+            & orders
+          </span>
+        </div>
+        <div className="header_option flex flex-col mx-[10px] text-white">
+          <span className="header_optionLineOne text-[10px]">Your</span>
+          <span className="header_optionLineTwo text-[13px] font-extrabold">
+            Prime
+          </span>
+        </div>
+        <div className="header_optionBasket flex items-center text-white">
+          <AddShoppingCartIcon />
+          <span className="header_optionLineTwo header_basketCount mx-[10px] text-[13px] font-extrabold">
+            0
+          </span>
+        </div>
+      </div>
+    </div>
+  );
 }
+
+export default Header;
