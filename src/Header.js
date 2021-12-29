@@ -3,14 +3,17 @@ import "./Header.css";
 import logo from "./images/bruma-logo.jpg";
 import SearchIcon from "@mui/icons-material/Search";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
     <div className="header h-[60px] flex items-center bg-[#000000] sticky top-0 z-50">
-      <img
-        className="header_logo w-[85px] object-contain mx-[20px] my-0"
-        src={logo}
-      />
+      <Link to="/">
+        <img
+          className="header_logo w-[85px] object-contain mx-[20px] my-0"
+          src={logo}
+        />
+      </Link>
       <div className="header_search flex flex-[1] items-center rounded-[24px]">
         <input
           className="header_searchInput h-[12px] p-[10px] border-none w-full border-0 box-content"
