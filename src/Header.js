@@ -40,12 +40,14 @@ function Header() {
             Prime
           </span>
         </div>
-        <div className="header_optionBasket flex items-center text-white">
-          <AddShoppingCartIcon />
-          <span className="header_optionLineTwo header_basketCount mx-[10px] text-[13px] font-extrabold">
-            0
-          </span>
-        </div>
+        <Link to="/checkout">
+          <div className="header_optionBasket flex items-center text-white">
+            <AddShoppingCartIcon />
+            <span className="header_optionLineTwo header_basketCount mx-[10px] text-[13px] font-extrabold">
+              0
+            </span>
+          </div>
+        </Link>
       </div>
     </div>
   );
