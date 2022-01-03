@@ -4,8 +4,10 @@ import logo from "./images/bruma-logo.jpg";
 import SearchIcon from "@mui/icons-material/Search";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import { Link } from "react-router-dom";
+import { useStateValue } from "./StateProvider";
 
 function Header() {
+  const [{ basket }, dispatch] = useStateValue();
   return (
     <div className="header h-[60px] flex items-center bg-[#000000] sticky top-0 z-50">
       <Link to="/">
@@ -44,7 +46,7 @@ function Header() {
           <div className="header_optionBasket flex items-center text-white">
             <AddShoppingCartIcon />
             <span className="header_optionLineTwo header_basketCount mx-[10px] text-[13px] font-extrabold">
-              0
+              {basket?.length}
             </span>
           </div>
         </Link>
