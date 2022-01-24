@@ -24,12 +24,14 @@ function Header() {
         <SearchIcon className="header_searchIcon p-[5px] bg-[#20ACE8] box-content" />
       </div>
       <div className="header_nav flex justify-evenly">
-        <div className="header_option flex flex-col mx-[10px] text-white">
-          <span className="header_optionLineOne text-[10px]">Hello user</span>
-          <span className="header_optionLineTwo text-[13px] font-extrabold">
-            Sign in
-          </span>
-        </div>
+        <Link to="/login">
+          <div className="header_option flex flex-col mx-[10px] text-white">
+            <span className="header_optionLineOne text-[10px]">Hello user</span>
+            <span className="header_optionLineTwo text-[13px] font-extrabold">
+              Sign in
+            </span>
+          </div>
+        </Link>
         <div className="header_option flex flex-col mx-[10px] text-white">
           <span className="header_optionLineOne text-[10px]">Returns</span>
           <span className="header_optionLineTwo text-[13px] font-extrabold">
